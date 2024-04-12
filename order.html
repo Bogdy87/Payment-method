@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="order.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <title>PAYMENT FORM</title>
+    </head>
+   
+    <body>
+        <header class="header">
+            <h1>Order Summary</h1>
+            <p class="header-row">Total<span>$333 / month</span></p>
+
+            <hr />
+            <p class="header-row">
+                <strong>Total</strong><span><strong>$100</strong></span>
+            </p>
+        </header>
+
+        <form class="main">
+            <div class="container-pm">
+                <h2>Payment Method</h2>
+                <div class="container-imgs">
+                    <div class="container-img">
+                        <input
+                            type="radio"
+                            id="cards"
+                            name="payment-method"
+                            value="cards"
+                        />
+
+                        <label class="payment-option" for="cards">
+                            <img src="./pictures/cards.png" alt="Cards" />
+                            Credit / Debit</label
+                        >
+                    </div>
+                    <div class="container-img">
+                        <input
+                            type="radio"
+                            id="paypal"
+                            name="payment-method"
+                            value="paypal"
+                        />
+
+                        <label class="payment-option" for="paypal">
+                            <img src="./pictures/paypal.png" alt="PayPal" />
+                            PayPal</label
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-card-info">
+                <h2>Card Info</h2>
+                <div class="card-infos">
+                    <div class="card-info">
+                        <label for="card-number">Card number</label>
+                        <div>
+                            <input
+                                type="number"
+                                id="card-number"
+                                placeholder="1234 1234 1234 1234"
+                                name="card-number"
+                                required
+                            /><i class="fa fa-question-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="card-info">
+                        <label for="exp-date">Expiry date</label>
+                        <input
+                            type="text"
+                            pattern="\d{2}/\d{2}"
+                            placeholder="MM / YY"
+                            name="exp-date"
+                            required
+                        />
+                    </div>
+
+                    <div class="card-info">
+                        <label for="sec-code">Security code</label>
+                        <div>
+                            <input
+                                type="number"
+                                placeholder="CVV"
+                                name="sec-code"
+                                required
+                            />
+                            <i class="fa fa-question-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-buy-now">
+                <button type="submit" id="buy-now" value="Buy now">
+                    Buy now
+                </button>
+                <p>Need Help?</p>
+            </div>
+        </form>
+    </body>
+</html>
